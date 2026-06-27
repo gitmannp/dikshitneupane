@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dikshit Neupane | Tech & Cyber Security Enthusiast</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background grid & interactive canvas -->
+    <div class="bg-grid"></div>
+    <div class="glow-orb glow-1"></div>
+    <div class="glow-orb glow-2"></div>
+    <div class="glow-orb glow-3"></div>
+
+    <!-- Navigation Header -->
+    <header class="navbar">
+        <div class="logo">
+            <span class="logo-bracket">&lt;</span>
+            <span class="logo-text">Dikshit</span>
+            <span class="logo-bracket">/&gt;</span>
+        </div>
+        <nav class="nav-links">
+            <a href="#home" class="nav-link active">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#terminal" class="nav-link">Terminal</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+        <div class="mobile-nav-toggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </header>
+
+    <!-- Mobile Drawer Menu -->
+    <div class="mobile-menu">
+        <a href="#home" class="mobile-link">Home</a>
+        <a href="#about" class="mobile-link">About</a>
+        <a href="#terminal" class="mobile-link">Terminal</a>
+        <a href="#contact" class="mobile-link">Contact</a>
+    </div>
+
+    <!-- Main Container -->
+    <main class="container">
+        
+        <!-- Hero Section -->
+        <section id="home" class="hero-section section-padding">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    Powered by curiosity
+                </div>
+                <h1 class="hero-title">
+                    Hi, I'm <span class="gradient-text">Dikshit Neupane</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Tech enthusiast who loves building cool stuff on the web and diving into cyber security.
+                </p>
+                <div class="hero-actions">
+                    <a href="#terminal" class="btn btn-primary">
+                        <span>Launch Terminal</span>
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <span>Get in Touch</span>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="avatar-container">
+                    <div class="avatar-glow"></div>
+                    <div class="avatar-ring"></div>
+                    <img src="assets/profile.jpg" alt="Dikshit Neupane" class="avatar-image">
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section section-padding scroll-reveal">
+            <h2 class="section-title"><span class="gradient-text">01.</span> About Me</h2>
+            <div class="about-grid-single">
+                <div class="about-text-card glass-card">
+                    <div class="card-header">
+                        <span class="window-dot red"></span>
+                        <span class="window-dot yellow"></span>
+                        <span class="window-dot green"></span>
+                        <span class="window-title">bio.txt</span>
+                    </div>
+                    <div class="card-body">
+                        <p class="bio-para">
+                            Hey there, I’m Dikshit Neupane! 👋
+                        </p>
+                        <p class="bio-para">
+                            Just a tech enthusiast who loves building cool stuff on the web and diving into cyber security. When I'm not tweaking code or messing around in the Linux terminal, I'm usually exploring new tech trends or learning something new. Welcome to my space!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Terminal Section -->
+        <section id="terminal" class="terminal-section section-padding scroll-reveal">
+            <h2 class="section-title"><span class="gradient-text">02.</span> Interactive Shell</h2>
+            <p class="section-desc">Type commands to explore my digital environment. Try typing <code>help</code> to get started.</p>
+            
+            <div class="terminal-container glass-card">
+                <div class="terminal-header">
+                    <div class="terminal-buttons">
+                        <span class="window-dot red"></span>
+                        <span class="window-dot yellow"></span>
+                        <span class="window-dot green"></span>
+                    </div>
+                    <div class="terminal-title">dikshit@terminal: ~</div>
+                    <div class="terminal-actions">
+                        <span class="terminal-time" id="terminal-time">16:45:14</span>
+                    </div>
+                </div>
+                <div class="terminal-body" id="terminal-body">
+                    <div class="terminal-line">
+                        <span class="terminal-welcome">Welcome to Dikshit's interactive shell. Type <span class="term-highlight">help</span> for a list of available commands.</span>
+                    </div>
+                    <div class="terminal-line">
+                        <span class="terminal-prompt">guest@dikshit:~$</span>
+                        <span class="terminal-input-display">about</span>
+                    </div>
+                    <div class="terminal-output">
+                        Hey there, I’m Dikshit Neupane! 👋 Just a tech enthusiast who loves building cool stuff on the web and diving into cyber security. When I'm not tweaking code or messing around in the Linux terminal, I'm usually exploring new tech trends or learning something new. Welcome to my space!
+                    </div>
+                    
+                    <!-- Dynamic history will go here -->
+                    
+                    <div class="terminal-line terminal-input-line">
+                        <span class="terminal-prompt">guest@dikshit:~$</span>
+                        <div class="input-wrapper">
+                            <input type="text" id="terminal-input" autocomplete="off" spellcheck="false" autofocus>
+                            <span id="terminal-cursor"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section section-padding scroll-reveal">
+            <div class="glass-card contact-container">
+                <div class="contact-header">
+                    <h2 class="section-title-centered"><span class="gradient-text">Let's Connect</span></h2>
+                    <p class="contact-subtitle">Whether you want to discuss technology, collaborate on web development projects, ask about Linux environments, or just say hello!</p>
+                </div>
+                
+                <div class="contact-methods">
+                    <a href="mailto:dixitneupane.np@gmail.com" class="contact-item-card glass-card">
+                        <div class="contact-icon-box mail-bg">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        </div>
+                        <div class="contact-info">
+                            <span class="contact-label">Email Me</span>
+                            <span class="contact-value">dixitneupane.np@gmail.com</span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="social-links-container">
+                    <h4 class="social-title">Find Me on Socials</h4>
+                    <div class="social-grid">
+                        <!-- GitHub -->
+                        <a href="https://github.com/neupanedikshit" target="_blank" class="social-link-item github-social">
+                            <svg class="social-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                            <span>GitHub</span>
+                        </a>
+                        <!-- Instagram -->
+                        <a href="https://www.instagram.com/dikshitneupanee/" target="_blank" class="social-link-item instagram-social">
+                            <svg class="social-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                            <span>Instagram</span>
+                        </a>
+                        <!-- Facebook -->
+                        <a href="https://www.facebook.com/dikshitneupanee" target="_blank" class="social-link-item facebook-social">
+                            <svg class="social-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                            <span>Facebook</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <p class="copyright">&copy; <span id="current-year">2026</span> Dikshit Neupane. All rights reserved.</p>
+            <p class="design-credit">Crafted with modern HTML, CSS, and JS</p>
+        </div>
+    </footer>
+
+    <!-- Interactive script -->
+    <script src="script.js"></script>
+</body>
+</html>
